@@ -1,26 +1,42 @@
 const { Schema, model } = require('mongoose');
+const reactionSchema = require('./Reaction');
+const dateFormat = require('../utils/dateFormat');
 
 // Schema to create Thought model
 const thoughtSchema = new Schema(
-  {
-    text: String,
-    username: String,
-    // comments: [{ type: Schema.Types.ObjectId, ref: 'comment' }],
-  },
-  {
-    toJSON: {
-      virtuals: true,
+    {
+        thoughtText: {
+            type: String,
+            required: true,
+            min: 1,
+            max: 280,
+        },
+        createdAt: {
+            type: Date,
+            default: Date.now,
+            get: timestamp=>dateFormat(timestamp),
+        },
+        username: {
+            type: String,
+            required: true,
+        },
+        reactions: [
+            reactionSchema
+        ],
     },
-    id: false,
-  }
+    {
+        toJSON: {
+            virtuals: true,
+        },
+        id: false,
+    }
 );
 
-// Create a virtual property `commentCount` that gets the amount of comments per post
-// postSchema.virtual('commentCount').get(function () {
-//   return this.comments.length;
-// });
+thoughtSchema.virtual('reactionCount').get(function () {
+    return this.reactions.length;
+});
 
 // Initialize our Thought model
-const Thought = model('thought', thoughtSchema);
+const Thought = model('Thought', thoughtSchema);
 
 module.exports = Thought;
