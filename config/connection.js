@@ -1,6 +1,6 @@
 const { connect, connection } = require('mongoose');
 
-connect('mongodb+srv://meganmchugh:Ut1996bronx$@bootcamp.u0gziq4.mongodb.net/socialnetworkDB',
+connect(process.env.MONGODB_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
