@@ -85,7 +85,7 @@ module.exports = {
     .catch((err) => res.status(500).json(err));
   },
   removeReaction(req,res){
-    Thought.findOneAndUpdate(
+    Thought.findOneAndRemove(
     {_id:req.params.thoughtId},
     {$pull:{reactions:{reactionId:req.params.reactionId}}},
     {runValidators:true, new:true}
@@ -94,7 +94,7 @@ module.exports = {
     if (!dbThoughtData){
       return req.status(404).json({message:'no thought with this ID'})
     }
-    res.json(dbThoughtData)
+    res.json({message:'reaction successfully deleted'})
   })
   .catch((err) => res.status(500).json(err));}
 };
