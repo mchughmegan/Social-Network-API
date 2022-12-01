@@ -37,26 +37,39 @@ After running the necessary commands in the integrated terminal as explained abo
 ![node server.js](https://github.com/mchughmegan/Social-Network-API/blob/main/assets/node%20server.js.png)
 
 The user will then open Insomnia, and use the routes for users, friends, thoughts, and reactions.
+![routes](https://github.com/mchughmegan/Social-Network-API/blob/main/assets/routes.png)
 
 To add a user, the Social Network API user will need to enter a username and email.
+![create user](https://github.com/mchughmegan/Social-Network-API/blob/main/assets/create%20user.png)
 
 To add a friend, a user ID and a friend ID will need to be added to the route.
+![add friend](https://github.com/mchughmegan/Social-Network-API/blob/main/assets/add%20friend.png)
 
 To add a thought, the user will need to enter a thoughtText and a username.
+![add thought](https://github.com/mchughmegan/Social-Network-API/blob/main/assets/add%20thought.png)
 
 To add a reaction, the user will need to enter a reactionBody and a username.
+![add reaction](https://github.com/mchughmegan/Social-Network-API/blob/main/assets/add%20reaction.png)
 
 To delete a user, the Social Network API user will need to include a user ID in their route.
+![delete user](https://github.com/mchughmegan/Social-Network-API/blob/main/assets/delete%20user.png)
 
 To delete a friend, the user will need to include a user ID and friend ID in the route.
+![delete friend](https://github.com/mchughmegan/Social-Network-API/blob/main/assets/delete%20friend.png)
 
 To delete a thought, the user will need to include the thought ID in their route.
+![delete thought](https://github.com/mchughmegan/Social-Network-API/blob/main/assets/delete%20thought.png)
 
 To delete a reaction, the user will need to include the thought ID and reaction ID in their route.
+![delete reaction](https://github.com/mchughmegan/Social-Network-API/blob/main/assets/delete%20reaction.png)
 
-The user will be able to view one thought or one user by enter the user ID or thought ID to the users route or thoughts route as applicable.
+The user will be able to view one user or one thought by entering the user ID or thought ID to the users route or thoughts route as applicable.
+![view one user](https://github.com/mchughmegan/Social-Network-API/blob/main/assets/view%20one%20user.png)
+![view one thought](https://github.com/mchughmegan/Social-Network-API/blob/main/assets/view%20one%20thought.png)
 
 And lastly, the user will be able to view all users or all thoughts.
+![view all users](https://github.com/mchughmegan/Social-Network-API/blob/main/assets/all%20users.png)
+![view all thoughts](https://github.com/mchughmegan/Social-Network-API/blob/main/assets/all%20thoughts.png)
 
 ## Credits
 
